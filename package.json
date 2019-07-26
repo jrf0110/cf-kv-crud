@@ -1,0 +1,27 @@
+{
+  "name": "cf-kv-crud",
+  "version": "1.0.3",
+  "description": "An interface to Cloudflare's KV for performing CRUD operations on objects",
+  "repository": {
+    "url": "https://github.com/jrf0110/cf-kv-crud"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "yarn build",
+    "build": "tsc -d",
+    "build:watch": "yarn build -w",
+    "typecheck": "tsc --noEmit",
+    "test": "ava dist/*_test.js",
+    "test:watch": "yarn test -w"
+  },
+  "author": "John Fawcett",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^1.0.1",
+    "ava": "^1.4.1",
+    "service-worker-mock": "^2.0.3",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {}
+}
